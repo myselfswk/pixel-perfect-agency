@@ -7,12 +7,12 @@ const Clients = () => {
   const { ref, isInView } = useScrollReveal();
 
   return (
-    <section className="py-16 section-padding border-y border-border/30 overflow-hidden" ref={ref}>
+    <section className="py-10 section-padding border-y border-border/30 overflow-hidden" ref={ref}>
       <motion.p
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6 }}
-        className="text-center text-muted-foreground text-sm tracking-[0.15em] uppercase mb-10"
+        className="text-center text-muted-foreground text-sm tracking-[0.15em] uppercase mb-6"
       >
         Trusted by innovative brands
       </motion.p>

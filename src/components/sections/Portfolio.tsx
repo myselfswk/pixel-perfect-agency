@@ -21,7 +21,7 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Our Work</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold">

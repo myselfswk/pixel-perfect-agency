@@ -18,7 +18,7 @@ const Blog = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-4"
+          className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 gap-4"
         >
           <div>
             <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Insights</p>
