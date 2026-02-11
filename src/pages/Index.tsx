@@ -11,16 +11,23 @@ import Pricing from "@/components/sections/Pricing";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/sections/Footer";
 
+const Divider = () => <div className="section-divider max-w-7xl mx-auto section-padding" />;
+
 const Index = () => (
   <div className="bg-background text-foreground overflow-x-hidden">
     <Navbar />
     <Hero />
     <Clients />
     <Services />
+    <Divider />
     <Process />
+    <Divider />
     <About />
+    <Divider />
     <Portfolio />
+    <Divider />
     <Testimonials />
+    <Divider />
     <Blog />
     <Pricing />
     <CTA />
