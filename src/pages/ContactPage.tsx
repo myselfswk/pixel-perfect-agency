@@ -2,21 +2,19 @@ import { motion } from "framer-motion";
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from "react-icons/hi";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import PageHero from "@/components/PageHero";
 
 const ContactPage = () => (
   <div className="bg-background text-foreground overflow-x-hidden">
     <Navbar />
-    <main className="pt-28 section-padding pb-20">
+    <PageHero
+      label="Contact"
+      title="Let's Talk"
+      gradient="Talk"
+      description="Ready to start your next project? Drop us a line and we'll get back to you within 24 hours."
+    />
+    <main className="section-padding pb-20">
       <div className="max-w-5xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-14">
-          <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Contact</p>
-          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            Let's <span className="text-gradient">Talk</span>
-          </h1>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
-            Ready to start your next project? Drop us a line and we'll get back to you within 24 hours.
-          </p>
-        </motion.div>
 
         <div className="grid md:grid-cols-5 gap-10">
           <motion.form
