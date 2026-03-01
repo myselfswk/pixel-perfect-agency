@@ -4,6 +4,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import CTA from "@/components/sections/CTA";
+import PageHero from "@/components/PageHero";
 
 const stats = [
   { value: 150, suffix: "+", label: "Projects Delivered" },
@@ -35,17 +36,14 @@ const AboutPage = () => {
   return (
     <div className="bg-background text-foreground overflow-x-hidden">
       <Navbar />
-      <main className="pt-28 section-padding" ref={ref}>
+      <PageHero
+        label="About Us"
+        title="We're Your Growth Partners"
+        gradient="Growth Partners"
+        description="Founded in 2012, NovaX has grown from a small team of digital enthusiasts into a full-service agency trusted by brands worldwide. We blend creativity with data to deliver campaigns that don't just look great — they perform."
+      />
+      <main className="section-padding" ref={ref}>
         <div className="max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-16">
-            <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">About Us</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              We're Your <span className="text-gradient">Growth Partners</span>
-            </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              Founded in 2012, NovaX has grown from a small team of digital enthusiasts into a full-service agency trusted by brands worldwide. We blend creativity with data to deliver campaigns that don't just look great — they perform.
-            </p>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}

@@ -3,6 +3,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { HiOutlineLocationMarker, HiOutlineClock } from "react-icons/hi";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import PageHero from "@/components/PageHero";
 
 const openings = [
   { title: "Senior SEO Strategist", dept: "Marketing", location: "Remote", type: "Full-time" },
@@ -23,17 +24,14 @@ const CareersPage = () => {
   return (
     <div className="bg-background text-foreground overflow-x-hidden">
       <Navbar />
-      <main className="pt-28 section-padding" ref={ref}>
+      <PageHero
+        label="Careers"
+        title="Join the NovaX Team"
+        gradient="NovaX Team"
+        description="We're always looking for talented individuals who are passionate about digital marketing and technology. Build your career with a team that values creativity, growth, and impact."
+      />
+      <main className="section-padding" ref={ref}>
         <div className="max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-16">
-            <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Careers</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Join the <span className="text-gradient">NovaX Team</span>
-            </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              We're always looking for talented individuals who are passionate about digital marketing and technology. Build your career with a team that values creativity, growth, and impact.
-            </p>
-          </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.2 }} className="mb-20">
             <h2 className="font-display text-2xl font-bold mb-6">Perks & Benefits</h2>

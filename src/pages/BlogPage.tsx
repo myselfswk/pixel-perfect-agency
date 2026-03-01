@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import PageHero from "@/components/PageHero";
 
 const posts = [
   { title: "10 SEO Trends That Will Define 2024", tag: "SEO", date: "Mar 15, 2024", read: "8 min", excerpt: "Stay ahead of the curve with these emerging search engine optimization trends shaping the digital landscape." },
@@ -18,17 +19,14 @@ const BlogPage = () => {
   return (
     <div className="bg-background text-foreground overflow-x-hidden">
       <Navbar />
-      <main className="pt-28 section-padding" ref={ref}>
+      <PageHero
+        label="Blog"
+        title="Insights & Ideas"
+        gradient="Ideas"
+        description="Thoughts, strategies, and deep dives from the NovaX team on digital marketing, design, and technology."
+      />
+      <main className="section-padding" ref={ref}>
         <div className="max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-14">
-            <p className="text-primary text-sm font-semibold tracking-[0.2em] uppercase mb-3">Blog</p>
-            <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-              Insights & <span className="text-gradient">Ideas</span>
-            </h1>
-            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-              Thoughts, strategies, and deep dives from the NovaX team on digital marketing, design, and technology.
-            </p>
-          </motion.div>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-20">
             {posts.map((post, i) => (
