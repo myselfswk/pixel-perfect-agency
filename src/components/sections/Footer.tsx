@@ -1,14 +1,15 @@
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 import { FaLinkedin, FaTwitter, FaInstagram, FaDribbble } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer className="border-t border-border/50 section-padding py-16">
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <div>
-          <h3 className="font-display text-2xl font-bold mb-4">
+          <Link to="/" className="font-display text-2xl font-bold mb-4 inline-block">
             Nova<span className="text-gradient">X</span>
-          </h3>
+          </Link>
           <p className="text-muted-foreground text-sm leading-relaxed">
             Full-service digital marketing agency helping brands break through the noise since 2012.
           </p>
@@ -17,20 +18,20 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold text-foreground mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="hover:text-foreground transition-colors cursor-pointer">SEO Optimization</li>
-            <li className="hover:text-foreground transition-colors cursor-pointer">Performance Marketing</li>
-            <li className="hover:text-foreground transition-colors cursor-pointer">Content Strategy</li>
-            <li className="hover:text-foreground transition-colors cursor-pointer">Web Development</li>
+            <li><Link to="/services/seo-optimization" className="hover:text-foreground transition-colors">SEO Optimization</Link></li>
+            <li><Link to="/services/performance-marketing" className="hover:text-foreground transition-colors">Performance Marketing</Link></li>
+            <li><Link to="/services/mobile-development" className="hover:text-foreground transition-colors">Mobile Development</Link></li>
+            <li><Link to="/services/web-development" className="hover:text-foreground transition-colors">Web Development</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-display font-semibold text-foreground mb-4">Company</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="hover:text-foreground transition-colors cursor-pointer">About</li>
-            <li className="hover:text-foreground transition-colors cursor-pointer">Careers</li>
-            <li className="hover:text-foreground transition-colors cursor-pointer">Blog</li>
-            <li className="hover:text-foreground transition-colors cursor-pointer">Contact</li>
+            <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
+            <li><Link to="/careers" className="hover:text-foreground transition-colors">Careers</Link></li>
+            <li><Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
+            <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
           </ul>
         </div>
 
