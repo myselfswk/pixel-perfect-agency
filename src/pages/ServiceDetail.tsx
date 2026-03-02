@@ -128,7 +128,7 @@ const ServiceDetail = () => {
         gradient={service.title.split(" ").pop() || ""}
         description={service.longDesc}
         icon={service.icon}
-        backLink={{ to: "/#services", label: "Back to Services" }}
+        image={service.image}
       />
 
       {/* Stats */}
